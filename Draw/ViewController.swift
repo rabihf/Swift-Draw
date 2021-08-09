@@ -25,12 +25,13 @@ class ViewController: UIViewController {
 
     fileprivate func setupView() {
         view.backgroundColor = .systemTeal
-        logoSize = CGSize(width: (logoImage?.size.width)!, height: (logoImage?.size.height)!)
+        // logoSize: width == height and size based on view height / 3 objects
+        logoSize = CGSize(width: (view.bounds.height - 70) / 3, height: (view.bounds.height - 70) / 3)
 
+        setupSlider()
         setupLogo()
         setupBox()
         setupShape()
-        setupSlider()
     }
     
     fileprivate func setupLogo() {

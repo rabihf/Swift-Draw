@@ -35,21 +35,21 @@ class Shape: UIView {
 
         let t: Double = deg2rad(35)
         
-        path.addArc(withCenter: CGPoint(x: frame.width * 1 / 4,
+        path.addArc(withCenter: CGPoint(x: frame.height * 1 / 4,
                                         y: frame.height / 4),
-                    radius: CGFloat( frame.width / 4),
+                    radius: CGFloat(frame.height / 4),
                     startAngle: CGFloat(deg2rad(180) - t),
                     endAngle: CGFloat(deg2rad(360.0)),
                     clockwise: true)
         
-        path.addArc(withCenter: CGPoint(x: frame.width * 3 / 4 ,
+        path.addArc(withCenter: CGPoint(x: frame.height * 3 / 4 ,
                                         y: frame.height / 4),
-                    radius: CGFloat(frame.width / 4),
+                    radius: CGFloat(frame.height / 4),
                     startAngle: CGFloat(deg2rad(180.0)),
                     endAngle: CGFloat(deg2rad(360.0) + t),
                     clockwise: true)
         
-        path.addLine(to: CGPoint(x: frame.width / 2, y: frame.height))
+        path.addLine(to: CGPoint(x: frame.height / 2, y: frame.height))
         path.close()
         
         path.fill()
